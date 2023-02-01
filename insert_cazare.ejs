@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga cazare
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga cazare
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="camera_id"> camera_id </label>
+        <input type="text" id="camera_id" name="camera_id">
+        <label for="client_id"> client_id </label>
+        <input type="text" id="client_id" name="client_id">
+        <label for="tip_operatie"> tip_operatie</label>
+        <input type="text" id="tip_operatie" name="tip_operatie">
+        <label for="data_cazare"> data_cazare</label>
+        <input type="text" id="data_cazare" name="data_cazare">
+        
+        <script>
+            function  myfunction (){
+          
+             let camera_id=document.getElementById("camera_id").value;
+             let client_id=document.getElementById("client_id").value;
+             let tip_operatie=document.getElementById("tip_operatie").value;
+             let data_cazare=document.getElementById("data_cazare").value;
+             
+
+             
+             location.href=`http://localhost:3000/inserareCazare?camera_id=${camera_id}&client_id=${client_id}&tip_operatie=${tip_operatie}&data_cazare=${data_cazare}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

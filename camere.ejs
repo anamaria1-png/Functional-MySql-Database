@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Camere
+    </title>
+</head>
+
+<body>
+    <h2>
+        Camere
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/camereSortat"> SORTEAZA dupa pret</a>
+    </div>
+    <div>
+        <a href="/insert_camera"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let camera of locals.camere){%>
+        <div>
+            hotel_id<%- camera.hotel_id %>
+            camera_id<%- camera.camera_id %>
+            data_ocupare <%- camera.data_ocupare %>
+            pret <%- camera.pret %>
+            stare_camera<%- camera.stare_camera %>
+            
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

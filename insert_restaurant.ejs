@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga restaurant
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga restaurant
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="hotel_id"> hotel_id </label>
+        <input type="text" id="hotel_id" name="hotel_id">
+        <label for="meniu"> meniu </label>
+        <input type="text" id="meniu" name="meniu">
+        <label for="pret_meniu"> pret_meniu</label>
+        <input type="text" id="pret_meniu" name="pret_meniu">
+        <label for="capacitate_locuri"> capacitate_locuri</label>
+        <input type="text" id="capacitate_locuri" name="capacitate_locuri">
+        <label for="stare_restaurant"> stare_restaurant</label>
+        <input type="text" id="stare_restaurant" name="stare_restaurant">
+        <script>
+            function  myfunction (){
+          
+             let hotel_id=document.getElementById("hotel_id").value;
+             let meniu=document.getElementById("meniu").value;
+             let pret_meniu=document.getElementById("pret_meniu").value;
+             let capacitate_locuri=document.getElementById("capacitate_locuri").value;
+             let stare_restaurant=document.getElementById("stare_restaurant").value;
+             location.href=`http://localhost:3000/inserareRestaurant?hotel_id=${hotel_id}&meniu=${meniu}&pret_meniu=${pret_meniu}&capacitate_locuri=${capacitate_locuri}&stare_restaurant=${stare_restaurant}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

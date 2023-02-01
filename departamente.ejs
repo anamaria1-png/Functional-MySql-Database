@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Departamente
+    </title>
+</head>
+
+<body>
+    <h2>
+        Departamente
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/departamenteSortat"> SORTEAZA dupa capacitatea departament</a>
+    </div>
+    <div>
+        <a href="/insert_departament"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let departament of locals.departamente){%>
+        <div>
+            hotel_id<%- departament.departament_id %>
+            departament_id<%- departament.departament_id %>
+            den_departament <%- departament.den_departament %>
+            capacitate_departament<%- departament.capacitate_departament %>
+            stare_departament<%- departament.stare_departament %>
+            
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

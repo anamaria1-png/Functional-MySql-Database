@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga angajat
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga angajat
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="job_id"> job_id </label>
+        <input type="text" id="job_id" name="job_id">
+        <label for="salariu"> salariu </label>
+        <input type="text" id="salariu" name="salariu">
+        <label for="stare_contract"> stare_contract</label>
+        <input type="text" id="stare_contract" name="stare_contract">
+        <label for="data_angajare"> data_angajare</label>
+        <input type="text" id="data_angajare" name="data_angajare">
+        <script>
+            function  myfunction (){
+          
+             let job_id=document.getElementById("job_id").value;
+             let salariu=document.getElementById("salariu").value;
+             let stare_contract=document.getElementById("stare_contract").value;
+             let data_angajare=document.getElementById("data_angajare").value;
+             location.href=`http://localhost:3000/inserareAngajat?job_id=${job_id}&salariu=${salariu}&stare_contract=${stare_contract}&data_angajare=${data_angajare}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

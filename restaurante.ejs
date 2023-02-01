@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Restaurante
+    </title>
+</head>
+
+<body>
+    <h2>
+        Restaurante
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/restauranteSortat"> SORTEAZA dupa capacitatea de locuri</a>
+    </div>
+    <div>
+        <a href="/insert_restaurant"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let restaurant of locals.restaurante){%>
+        <div>
+            hotel_id<%- restaurant.hotel_id %>
+            restaurant_id<%- restaurant.restaurant_id %>
+            capacitate_locuri<%- restaurant.capacitate_locuri %>
+            pret_meniu<%- restaurant.pret_meniu %>
+            meniu<%- restaurant.meniu %>
+            <a href="/restaurantDelete/<%- restaurant.hotel_id %>"> Sterge  </a>
+            
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

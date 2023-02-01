@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga oras
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga oras
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="cod_tara"> cod_tara </label>
+        <input type="text" id="cod_tara" name="cod_tara">
+        <label for="den_oras"> den_oras </label>
+        <input type="text" id="den_oras" name="den_oras">
+        <label for="cod_postal"> cod_postal </label>
+        <input type="text" id="cod_postal" name="cod_postal">
+        <script>
+            function  myfunction (){
+          
+             let cod_tara=document.getElementById("cod_tara").value;
+             let den_oras=document.getElementById("den_oras").value;
+             let cod_postal=document.getElementById("cod_postal").value;
+             location.href=`http://localhost:3000/inserareOras?&cod_tara=${cod_tara}&den_oras=${den_oras}&cod_postal=${cod_postal}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

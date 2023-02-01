@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Tari
+    </title>
+</head>
+
+<body>
+    <h2>
+        Tari
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/tariSortat"> SORTEAZA dupa codul tarii</a>
+    </div>
+    <div>
+        <a href="/insert_tara"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let tara of locals.tari){%>
+        <div>
+            cod_tara <%- tara.cod_tara %>
+            den_tara <%- tara.den_tara %>
+           
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

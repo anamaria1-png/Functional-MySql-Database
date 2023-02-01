@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga hotel
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga hotel
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="oras_id"> oras_id </label>
+        <input type="text" id="oras_id" name="oras_id">
+        <label for="den_hotel"> den_hotel </label>
+        <input type="text" id="den_hotel" name="den_hotel">
+        <label for="adresa"> adresa</label>
+        <input type="text" id="adresa" name="adresa">
+        <label for="capacitate_maxima"> capacitate_maxima</label>
+        <input type="text" id="capacitate_maxima" name="capacitate_maxima">
+        <label for="nr_telefon"> nr_telefon</label>
+        <input type="text" id="nr_telefon" name="nr_telefon">
+        <script>
+            function  myfunction (){
+          
+             let oras_id=document.getElementById("oras_id").value;
+             let den_hotel=document.getElementById("den_hotel").value;
+             let adresa=document.getElementById("adresa").value;
+             let capacitate_maxima=document.getElementById("capacitate_maxima").value;
+             let nr_telefon=document.getElementById("nr_telefon").value;
+             location.href=`http://localhost:3000/inserareHotel?&oras_id=${oras_id}&den_hotel=${den_hotel}&adresa=${adresa}&capacitate_maxima=${capacitate_maxima}&nr_telefon=${nr_telefon}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

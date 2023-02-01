@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Orase
+    </title>
+</head>
+
+<body>
+    <h2>
+        Orase
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/oraseSortat"> SORTEAZA dupa codul postal</a>
+    </div>
+    <div>
+        <a href="/insert_oras"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let oras of locals.orase){%>
+        <div>
+            cod_tara<%- oras.cod_tara %>
+            oras_id<%- oras.oras_id %>
+            den_oras <%- oras.den_oras %>
+            cod_postal <%- oras.cod_postal%>
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

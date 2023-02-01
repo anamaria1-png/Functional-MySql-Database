@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>View
+    </title>
+</head>
+
+<body>
+    <h2>
+        View
+    </h2>
+    <%- include('./meniu.ejs'); %>
+
+    <br>
+    <% for (let view of locals.views){%>
+        <div>
+            v_meniu <%- view.meniu %>
+             v_pret <%- view.pret_meniu %>
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

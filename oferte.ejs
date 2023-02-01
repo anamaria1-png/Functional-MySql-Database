@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Oferte
+    </title>
+</head>
+
+<body>
+    <h2>
+        Oferte
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/oferteSortat"> SORTEAZA dupa pret_oferta</a>
+    </div>
+    <div>
+        <a href="/insert_oferta"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let oferta of locals.oferte){%>
+        <div>
+            camera_id<%- oferta.camera_id %>
+            oferta_id<%- oferta.oferta_id %>
+            pret_oferta <%- oferta.pret_oferta %>
+            tip_oferta<%- oferta.tip_oferta %>
+            <a href="/ofertaDelete/<%- oferta.camera_id %>"> Sterge  </a> 
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Clienti
+    </title>
+</head>
+
+<body>
+    <h2>
+        Clienti
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/clientiSortat"> SORTEAZA dupa varsta</a>
+    </div>
+    <div>
+        <a href="/insert_client"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let client of locals.clienti){%>
+        <div>
+            client_id<%- client.client_id %>
+            camera_id<%- client.camera_id %>
+            tip_client<%- client.tip_client%>
+            prenume<%- client.prenume %>
+            nume<%- client.nume%>
+            varsta<%- client.varsta%>
+            <a href="clientDelete/<%- client.camera_id %>"> Sterge  </a> 
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

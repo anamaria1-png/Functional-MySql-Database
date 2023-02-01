@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Cazari
+    </title>
+</head>
+
+<body>
+    <h2>
+        Cazari
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/cazariSortat"> SORTEAZA dupa data cazarii</a>
+    </div>
+    <div>
+        <a href="/insert_cazare"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let cazare of locals.cazari){%>
+        <div>
+            camera_id<%- cazare .camera_id %>
+            client_id<%- cazare .client_id %>
+            data_cazare  <%- cazare .data_cazare  %>
+            tip_operatie<%- cazare .tip_operatie %>
+     
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

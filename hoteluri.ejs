@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Hoteluri
+    </title>
+</head>
+
+<body>
+    <h2>
+        Hoteluri
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/hoteluriSortat"> SORTEAZA dupa capacitatea maxima</a>
+    </div>
+    <div>
+        <a href="/bestHotels"> Cerere cele mai bune hoteluri </a> 
+    </div>
+    <div>
+        <a href="/hotelRooms"> Numar camere de hotel </a> 
+    </div>
+    <div>
+        <a href="/insert_hotel"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let hotel of locals.hoteluri){%>
+        <div>
+            hotel_id<%- hotel.hotel_id %>
+            oras_id<%- hotel.oras_id %>
+            den_hotel <%- hotel.den_hotel %>
+            adresa <%- hotel.adresa %>
+            nr_telefon <%- hotel.nr_telefon %>
+            capacitate_maxima<%- hotel.capacitate_maxima %>
+          
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

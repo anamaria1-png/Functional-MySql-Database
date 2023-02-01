@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga departament
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga departament
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="hotel_id"> hotel_id </label>
+        <input type="text" id="hotel_id" name="hotel_id">
+        <label for="den_departament"> den_departament </label>
+        <input type="text" id="den_departament" name="den_departament">
+        <label for="capacitate_departament"> capacitate_departament</label>
+        <input type="text" id="capacitate_departament" name="capacitate_departament">
+        <label for="stare_departament"> stare_departament</label>
+        <input type="text" id="stare_departament" name="stare_departament">
+        <script>
+            function  myfunction (){
+          
+             let hotel_id=document.getElementById("hotel_id").value;
+             let den_departament=document.getElementById("den_departament").value;
+             let stare_departament=document.getElementById("stare_departament").value;
+             let capacitate_departament=document.getElementById("capacitate_departament").value;
+             
+             location.href=`http://localhost:3000/inserareDepartament?hotel_id=${hotel_id}&den_departament=${den_departament}&capacitate_departament=${capacitate_departament}&stare_departament=${stare_departament}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

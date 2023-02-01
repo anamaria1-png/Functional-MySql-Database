@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Joburi
+    </title>
+</head>
+
+<body>
+    <h2>
+        Joburi
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <div>
+        <a href="/joburiSortat"> SORTEAZA dupa numarul locurilor scoase la concurs</a>
+    </div>
+    <div>
+        <a href="/insert_job"> Insereaza</a>
+    </div>
+    <br>
+    <% for (let job of locals.joburi){%>
+        <div>
+            job_id<%- job.job_id %>
+            departament_id<%- job.job_id %>
+            den_job<%- job.den_job %>
+            nr_locuri_scoase<%- job.nr_locuri_scoase %>
+            stare_job<%- job.stare_job %>
+            <a href="/onDeleteCascade/<%- job.departament_id %>"> Sterge  </a> 
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

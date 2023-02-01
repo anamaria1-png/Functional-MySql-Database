@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga oferta
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga oferta
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="camera_id"> camera_id </label>
+        <input type="text" id="camera_id" name="camera_id">
+        <label for="pret_oferta"> pret_oferta </label>
+        <input type="text" id="pret_oferta" name="pret_oferta">
+        <label for="tip_oferta"> tip_oferta</label>
+        <input type="text" id="tip_oferta" name="tip_oferta">
+        <script>
+            function  myfunction (){
+          
+             let camera_id=document.getElementById("camera_id").value;
+             let pret_oferta=document.getElementById("pret_oferta").value;
+             let tip_oferta=document.getElementById("tip_oferta").value;
+             
+             location.href=`http://localhost:3000/inserareOferta?camera_id=${camera_id}&pret_oferta=${pret_oferta}&tip_oferta=${tip_oferta}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

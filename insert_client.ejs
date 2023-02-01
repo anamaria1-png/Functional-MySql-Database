@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga client
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga client
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="camera_id"> camera_id </label>
+        <input type="text" id="camera_id" name="camera_id">
+        <label for="nume"> nume </label>
+        <input type="text" id="nume" name="nume">
+        <label for="prenume"> prenume</label>
+        <input type="text" id="prenume" name="prenume">
+        <label for="varsta"> varsta</label>
+        <input type="text" id="varsta" name="varsta">
+        <label for="tip_client"> tip_client</label>
+        <input type="text" id="tip_client" name="tip_client">
+        <script>
+            function  myfunction (){
+          
+             let camera_id=document.getElementById("camera_id").value;
+             let nume=document.getElementById("nume").value;
+             let prenume=document.getElementById("prenume").value;
+             let varsta=document.getElementById("varsta").value;
+             let tip_client=document.getElementById("tip_client").value;
+             
+             location.href=`http://localhost:3000/inserareClient?camera_id=${camera_id}&nume=${nume}&prenume=${prenume}&varsta=${varsta}&tip_client=${tip_client}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

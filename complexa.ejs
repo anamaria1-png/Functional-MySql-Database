@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>View complexa
+    </title>
+</head>
+
+<body>
+    <h2>
+        View complex
+    </h2>
+    <%- include('./meniu.ejs'); %>
+
+    <br>
+    <% for (let complex of locals.complexa){%>
+        <div>
+            vc_salariu <%- complex.salariu %>
+             vc_angajat_id <%- complex.angajat_id %>
+             vc_job_id <%- complex.job_id %>
+        </div>
+        <br>
+    <% } %>
+</body>
+
+</html>

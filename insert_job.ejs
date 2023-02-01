@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga job
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga job
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="departament_id"> departament_id </label>
+        <input type="text" id="departament_id" name="departament_id">
+        <label for="den_job"> den_job </label>
+        <input type="text" id="den_job" name="den_job">
+        <label for="stare_job"> stare_job</label>
+        <input type="text" id="stare_job" name="stare_job">
+        <label for="nr_locuri_scoase"> nr_locuri_scoase</label>
+        <input type="text" id="nr_locuri_scoase" name="nr_locuri_scoase">
+        <script>
+            function  myfunction (){
+          
+             let departament_id=document.getElementById("departament_id").value;
+             let den_job=document.getElementById("den_job").value;
+             let stare_job=document.getElementById("stare_job").value;
+             let nr_locuri_scoase=document.getElementById("nr_locuri_scoase").value;
+             location.href=`http://localhost:3000/inserareJob?departament_id=${departament_id}&den_job=${den_job}&stare_job=${stare_job}&nr_locuri_scoase=${nr_locuri_scoase}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga camera
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga camera
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+   
+        <label for="hotel_id"> hotel_id </label>
+        <input type="text" id="hotel_id" name="hotel_id">
+        <label for="pret"> pret </label>
+        <input type="text" id="pret" name="pret">
+        <label for="data_ocupare"> data_ocupare</label>
+        <input type="text" id="data_ocupare" name="data_ocupare">
+        <label for="stare_camera"> stare_camera</label>
+        <input type="text" id="stare_camera" name="stare_camera">
+        <script>
+            function  myfunction (){
+          
+             let hotel_id=document.getElementById("hotel_id").value;
+             let pret=document.getElementById("pret").value;
+             let stare_camera=document.getElementById("stare_camera").value;
+             let data_ocupare=document.getElementById("data_ocupare").value;
+             
+             location.href=`http://localhost:3000/inserareCamera?hotel_id=${hotel_id}&pret=${pret}&data_ocupare=${data_ocupare}&stare_camera=${stare_camera}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>

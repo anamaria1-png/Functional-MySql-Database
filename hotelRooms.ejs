@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Hoteluri
+    </title>
+</head>
+
+<body>
+    <h2>
+        Hoteluri
+    </h2>
+    <%- include('./meniu.ejs'); %>
+    <br>
+    <% for (let hotel of locals.hoteluri){%>
+        <div>
+            den_hotel <%- hotel.den_hotel %>
+            nr_camere <%- hotel.cnt %>
+        </div>
+        
+        <br>
+    <% } %>
+</body>
+
+</html>

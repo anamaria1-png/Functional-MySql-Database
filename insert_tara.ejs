@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Adauga tara
+    </title>
+</head>
+
+<body>
+    <h2>
+        Adauga tara
+    </h2>
+    <%- include('./meniu.ejs'); %>
+   
+    
+    <br>
+    <form>  
+        <label for="cod_tara"> cod_tara </label>
+        <input type="text" id="cod_tara" name="cod_tara">
+        <label for="den_tara"> den_tara </label>
+        <input type="text" id="den_tara" name="den_tara">
+        <script>
+            function  myfunction (){
+             let cod_tara=document.getElementById("cod_tara").value;
+             let den_tara=document.getElementById("den_tara").value;
+             location.href=`http://localhost:3000/inserareTara?cod_tara=${cod_tara}&den_tara=${den_tara}`;
+            }
+         </script>
+        <button type="button" onclick="myfunction()">
+            Adauga
+        </button>
+    </form>
+   
+</body>
+</html>
